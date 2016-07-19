@@ -20,5 +20,5 @@ WORKDIR /app
 
 EXPOSE 8080
 #ENTRYPOINT ["/app/pgweb_linux_amd64"]
-CMD /app/pgweb_linux_amd64 -s --bind=0.0.0.0 --listen=8080 --auth-user=${AUTH_USER:admin} --auth-pass=${AUTH_PASS:admin} --sessions
+CMD /app/pgweb_linux_amd64 -s --bind=0.0.0.0 --listen=8080 --auth-user=${AUTH_USER:-admin} --auth-pass=${AUTH_PASS:-admin} --sessions
 
